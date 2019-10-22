@@ -9,9 +9,21 @@
 </head>
 <body>
     <main>
-        <h1>Click on face's dice for try your lucky</h1>
+        <header>
+            <h1>Click the play button for try your lucky</h1>
+            <a href="../index.html">Return home</a>
+        </header>
+        
         <div class="scene">
-            <div class="cube">
+            <div class="cube cube_1">
+                <div class="cube__face cube__face--front"></div>
+                <div class="cube__face cube__face--back"></div>
+                <div class="cube__face cube__face--right"></div>
+                <div class="cube__face cube__face--left"></div>
+                <div class="cube__face cube__face--top"></div>
+                <div class="cube__face cube__face--bottom"></div>
+            </div>
+            <div class="cube cube_2">
                 <div class="cube__face cube__face--front"></div>
                 <div class="cube__face cube__face--back"></div>
                 <div class="cube__face cube__face--right"></div>
@@ -21,7 +33,23 @@
             </div>
             
         </div>
-        <p> by @elle.dlag 3D suggest by Marco Dell'Anna :-)</p>
+        <div class="row">
+            <a class="play-btn" href="#">PLAY</a>
+        </div>
+        <div class="row points">
+            <div class="pc-gamer">
+                <p>Giocatore PC</p>
+                <p class="p-result pc-result">0</p>
+            </div>
+            <div class="vs">
+                    vs
+            </div>
+            <div class="gamer">
+                <p class="name-gamer">Nome Giocatore</p>
+                <p class="p-result gamer-result">0</p>
+            </div>
+        </div>
+        <p class="winner"></p>
     </main>
     <script src="assets/js/script.js"></script>
 </body>
