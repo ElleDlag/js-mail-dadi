@@ -1,5 +1,5 @@
 var dom = document;
-var listMail = dom.querySelectorAll('.item-mail');
+var listMail = dom.querySelectorAll('.item-mail h6');
 var checkMail = dom.querySelector('#email');
 var checkBtn = dom.querySelector('.check-btn');
 var addBtn = dom.querySelector('.add-btn');
@@ -14,7 +14,15 @@ checkBtn.addEventListener('click', function(){
         alert('Questa non sembra essere una mail')
     }else{
         for (var i = 0; i < listMail.length; i++) {
-            
+            console.log(listMail[i].textContent)
+            if(mailValue === listMail[i].textContent){
+                alert('la mail è presente')
+            }else{
+                if(confirm('Vuoi aggiungere la tua mail?')){
+                    alert('ok'); 
+                }
+                break;
+            }
         }
     }
 

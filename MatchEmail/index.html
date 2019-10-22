@@ -19,7 +19,7 @@
         <p class="lead">Verifica se la tua email esiste oppure aggiungila</p>
         </div>
 
-        <div class="row my-5 py-5">
+        <div class="row my-5 pt-5">
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                 <span class="text-muted">Lista Email</span>
@@ -55,7 +55,7 @@
             </div>
             <div class="col-md-8 order-md-1">
                 <h4 class="mb-3">Verifica email</h4>
-                <form class="needs-validation" novalidate>
+                <form class="">
  
                     <div class="mb-3">
                         <label for="email">Email <span class="text-muted">(Optional)</span></label>
@@ -69,15 +69,22 @@
         
                     <div class="row">
                             <div class="col-md-6 mb-3">
-                                    <button class="btn btn-primary btn-lg btn-block check-btn" type="submit">verifica</button>
+                                <a class="btn btn-primary btn-lg btn-block check-btn">verifica</a>
                             </div>
                             <div class="col-md-6 mb-3">
-                                    <button class="btn btn-primary btn-lg btn-block disabled add-btn" type="submit">aggiungi</button>
+                                <a class="btn btn-primary btn-lg btn-block disabled add-btn">aggiungi</a>
                             </div>
                     </div>
                 </form>
             </div>
         </div>
+        <div class="row">
+                <div class="col-md-12">
+                    <hr class="mb-5">
+                   <span class="result"></span>
+                </div>
+        </div>
+
 
         <footer class="my-5 pt-5 text-muted text-center text-small">
         <p class="mb-1">&copy; 2019 @elle.dlag </p>
