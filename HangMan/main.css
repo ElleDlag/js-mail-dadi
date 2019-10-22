@@ -1,0 +1,239 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.flex-this{
+    display:flex;
+}
+body{
+font-family:Arial, sans-serif;
+text-align:center;
+box-sizing: border-box;
+}
+.wrapper{
+    max-width:400px;
+    margin:auto;
+    margin-top:50px;
+}
+.mywordbox{
+display:flex;
+height:45px;
+justify-content:center;
+font-weight:bold;
+font-size:20px;
+margin-top:50px;
+}
+.mywordbox>*{
+width:50px;
+height:45px;
+line-height:58px;
+border-bottom:3px solid black;
+text-transform:uppercase;
+text-align:center
+}
+.mywordbox>*:not(:last-child){
+margin-right:8px;
+}
+
+.match-letter{
+margin-top:30px;
+border:1px solid red
+}
+.letter-div.wrong{
+    color:red;
+    border-bottom:3px solid red;
+}
+.letter-div.right{
+    color:green;
+    border-bottom:3px solid green;
+}
+
+#new-game{
+    padding:10px 20px;
+    border-radius: 5px;
+    background: rgb(168, 235, 146);
+    margin-top: 30px;;
+    font-size:16px;
+    font-weight: 500;
+}
+
+#new-game:focus,
+input:focus{
+    outline: none;
+}
+form:first-of-type{
+    margin: 30px 0 20px;
+}
+form input{
+    height:40px;
+    padding: 0 15px;
+    font-size: 14px;
+    font-weight: 400px;
+    text-transform: uppercase;
+}
+
+form input[type="button"]{
+    color:white;
+    border:1px solid blue;
+    background: deepskyblue;
+    border-radius: 2px;;
+}
+#letter.shake{
+    border:1px solid #ccc;
+    border-bottom:3px solid red;
+    animation: shake 300ms ease-in-out;
+}
+label{
+    display: inline-block;
+    width:100px;
+    line-height: 40px;
+    height:40px;
+    padding-right:10px;
+    text-align: right;
+}
+.hangman{
+    height:350px;
+    margin:auto;
+    margin-top: 90px;   
+}
+.hangman:after,
+.hangman:before{
+    content: "";
+    display: table;
+    clear:both;
+}
+.wrapper-all{
+    float: left;
+    margin-left: 0;
+    position: relative;
+    width: 50%;
+    height:100%;
+    margin-left:calc(20%/2);  
+}
+.hang-base{
+    max-width: 300px;
+    margin-left: calc(100% - 400px);
+    margin-top: 15px;
+}
+
+
+
+.hangman-man{
+    position: absolute;
+    width:150px;
+    height: 250px;
+    top:14%;
+    left:50%;
+    transform-origin: center top;
+    transform:translateX(calc(-50% - 78px)) rotate(10deg); 
+}
+.part-body{
+    display: none;
+}
+.man-head{
+    position: absolute;
+    border:3px solid black;
+    width:45px;
+    height: 45px;
+    top: 0;
+    left:50%;
+    border-radius: 50%;
+    transform:translateX(-50%);
+}
+.man-body{
+    position: absolute;
+    width:45px;
+    height: 130px;
+    top:45px;
+    left:50%;
+    transform:translateX(-50%);
+}
+.man-lhand{
+    position: absolute;
+    width:60px;
+    height: 45px;
+    top:40px;
+    left:50%;
+    transform-origin: left center;
+    transform:rotate(40deg)
+}
+.man-rhand{
+    position: absolute;
+    width:60px;
+    height: 45px;
+    top:40px;
+    left:15px;
+    transform-origin: right center;
+    transform:rotate(-40deg)
+    
+}
+.man-lleg{
+    position: absolute;
+    width:80px;
+    height: 45px;
+    top:116px;
+    left:50%;
+    transform-origin: left center;
+    transform:rotate(50deg)
+}
+.man-rleg{
+    position: absolute;
+    width:80px;
+    height: 45px;
+    top:116px;
+    left:-5px;
+    transform-origin: right center;
+    transform:rotate(-50deg)
+}
+
+
+.hangman-man>*:not(.man-body)>span.line{
+    position: absolute;
+    display: block;
+    top:50%;
+    transform:translateY(-50%);
+    left:0;
+    width:100%;
+    height:3px;
+    background: black;
+}
+.hangman-man>.man-body>span.line{
+    position: absolute;
+    display: block;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:3px;
+    height:74%;
+    background: black;
+}
+.result-txt{
+    background: rgb(228, 228, 228);
+    width: 30%;
+    height:100%;
+    line-height: 350px;
+    float: left;
+    font-size: 30px;
+}
+
+
+
+
+
+@keyframes shake{
+    0%{transform : translate(0)}
+
+    20%,
+    40%,
+    60%,
+    80%{transform : translate(-5px)}
+
+    10%,
+    30%,
+    50%{transform : translate(+5px)}
+
+    70%,
+    100%{transform : translate(0)}
+    
+}

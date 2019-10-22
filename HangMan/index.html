@@ -4,11 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="main.css">
     <title>Document</title>
 </head>
 <body>
-    <h1>wait a moment</h1>
-    <a href="../index.html">return home</a>
+        <div class="container">
+            <div class="wrapper">
+                <h1>INDOVINA LA PAROLA</h1>
+                <div class="mywordbox">
+                </div>
+            </div>
+            <div class="wrapper-form">
+                <form>
+                    <label for="letter">One letter</label>
+                    <input type="text" id="letter" maxlength="1" class="" required autocomplete="off">
+                    <input type="button" value="TRY" id="letter-btn" >
+                </form>
+                <form>
+                    <label for="final">A word</label>
+                    <input type="text" id="final" required autocomplete="off">
+                    <input type="button" value="TRY" id="word-btn">
+                </form>
+                <button id="new-game">NUOVO PARTITA</button>
+            </div>
+            <div class="hangman">
+                <div class="wrapper-all">
+                    <div class="hang-base">
+                        <img src="hangBase.svg" alt="" id="hangbase">
+                    </div>
+                    <div class="hangman-man">
+                        <div class="man-head part-body">
+                        </div>
+                        <div class="man-body part-body">
+                            <span class="line"></span>
+                        </div>
+                        <div class="man-lhand part-body">
+                            <span class="line"></span>
+                        </div>
+                        <div class="man-rhand part-body">
+                            <span class="line"></span>
+                        </div>
+                        <div class="man-lleg part-body">
+                            <span class="line"></span>
+                        </div>
+                        <div class="man-rleg part-body">
+                            <span class="line"></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="result-txt">
+                </div>
+            </div>
+        </div>
+
+    <script src="wordsList.txt"></script>
+    <script src="script.js"></script>
 </body>
 </html>
