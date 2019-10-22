@@ -53,6 +53,7 @@ var randomWord = ()=>{
   y=0;
   tot=0;
   final.value="";
+  resultTxt.textContent=""
   if(!wordBox.childElementCount == 0){
     wordBox.innerHTML = " ";
   }
