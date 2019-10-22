@@ -95,7 +95,8 @@ label{
 .hangman{
     height:350px;
     margin:auto;
-    margin-top: 90px;   
+    margin-top: 90px;  
+    max-width: 1280px; 
 }
 .hangman:after,
 .hangman:before{
