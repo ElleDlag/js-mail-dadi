@@ -7,7 +7,7 @@ var output = dom.querySelector('.result');
 var mailListGroup = dom.querySelector('.mail-list-group');
 var mailValue;
 var mailLenght;
-var controller;
+
 /* var n; */
 
 //with "for" cycle without break
@@ -22,12 +22,12 @@ checkBtn.addEventListener('click', function(){
     if(!mailValue.includes('@') && !mailValue.includes('.') || mailLength <= 4){
         alert('Questa non sembra essere una mail')
     } else{
+        var controller = false;
         for (var i = 0; i < listMail.length; i++) {
             console.log(listMail[i].textContent)
             if(mailValue === listMail[i].textContent ){
                 controller = true;
-                i = listMail.length+1;
-            } else {controller = false}       
+            }
         }
         if(controller == true){
             alert("sei nella lista")
